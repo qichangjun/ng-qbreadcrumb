@@ -1,1 +1,1 @@
-[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./src/breadcrumb.component"},{"from":"./src/breadcrumb.service"},{"from":"./src/option.class"},{"from":"./src/breadcrumb.module"}]}]
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./breadcrumb.component"},{"from":"./breadcrumb.service"},{"from":"./option.class"},{"from":"./breadcrumb.module"}]}]

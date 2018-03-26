@@ -22,3 +22,6 @@ demo/webpack/webpack.config.js
 /src/*.js.map
 !/src/*.d.ts
 !/bundles/*.js.map
+
+./index.d.ts
+./index.ts
