@@ -1,6 +1,6 @@
 {
   "name": "ng-qbreadcrumb",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "a breadcrumb component for angular",
   "main": "release/index.js",
   "scripts": {
@@ -17,6 +17,17 @@
   "engines": {
     "node": ">=6.0.0"
   },
+  "keywords": [
+    "angular",
+    "breadcrumb",
+    "ng-breadcrumb",
+    "ng-qbreadcrumb",
+    "angular2",
+    "ng2",
+    "angular2-breadcrumb",
+    "ng2-breadcrumb",
+    "ngx-breadcrumb"
+  ],
   "dependencies": {
     "@angular/animations": "^5.2.9",
     "@angular/common": "^5.0.0",
