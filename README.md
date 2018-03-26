@@ -16,6 +16,8 @@ npm install ng-qbreadcrumb --save
 You'll need to add `BreadCrumbModule` to your application module.
 
 ```typescript
+import { BreadcrumbsModule } from 'ng-qbreadcrumb';
+
 @NgModule({
   declarations: [
     AppComponent
