@@ -25,7 +25,8 @@ import { BreadcrumbService } from './breadcrumb.service';
       </span>
     </span>
   `,
-  styleUrls: ['./breadcrumb.component.css'],
+  styles: [`
+  `],
 })
 export class BreadcrumbComponent {  
   @Input() ids : Array<any>;

@@ -1,12 +1,12 @@
 {
   "name": "ng-qbreadcrumb",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "a breadcrumb component for angular",
-  "main": "index.js",
+  "main": "release/index.js",
   "scripts": {
-    "clear-lib": "rm -rf lib",
-    "prepublish": "npm run clear-lib && npm run ngc-build",
-    "ngc-build": "ngc -p ./tsconfig-ngc.json"
+    "clear-release": "rm -rf release",
+    "prepublish": "npm run clear-release && npm run ngc-build",
+    "ngc-build": "ngc -p ./tsconfig-aot.json"
   },
   "repository": {
     "type": "git",
