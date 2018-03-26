@@ -1,4 +1,4 @@
-import { EventEmitter } from '@angular/core';
+import { EventEmitter, SimpleChange } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
@@ -15,4 +15,10 @@ export declare class BreadcrumbComponent {
     rootClickEvent: EventEmitter<any>;
     breadCrumbData: Array<any>;
     constructor(http: Http, breadcrumbService: BreadcrumbService);
+    breadNodeClick(node: any): void;
+    clickRootNode(rootNode: any): void;
+    updateData(ids: any): void;
+    ngOnChanges(changes: {
+        [propertyName: string]: SimpleChange;
+    }): void;
 }

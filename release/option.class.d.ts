@@ -4,6 +4,6 @@ export declare class Options {
     requestId?: string;
     keyTitle?: string;
     method?: 'get' | 'post';
-    additionalParam?: Object;
+    additionalParam?: any;
     requestCallBack?(res: any): any;
 }

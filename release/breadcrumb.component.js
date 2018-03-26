@@ -25,6 +25,46 @@ var BreadcrumbComponent = (function () {
         this.rootClickEvent = new core_1.EventEmitter();
         this.breadCrumbData = [];
     }
+    BreadcrumbComponent.prototype.breadNodeClick = function (node) {
+        for (var i = 0; i < this.ids.length; i++) {
+            if (this.ids[i] == node[this.options.keyId]) {
+                this.ids.splice(i + 1, this.ids.length - i);
+                break;
+            }
+        }
+        var ids = [];
+        for (var i = 0; i < this.ids.length; i++) {
+            ids.push(this.ids[i]);
+        }
+        this.breadNodeClickEvent.emit({ type: 'click', node: node, ids: ids });
+    };
+    BreadcrumbComponent.prototype.clickRootNode = function (rootNode) {
+        this.rootClickEvent.emit({ type: 'click', node: rootNode });
+    };
+    BreadcrumbComponent.prototype.updateData = function (ids) {
+        var _this = this;
+        if (!this.options || !this.options.url)
+            return;
+        var params = new http_1.URLSearchParams();
+        params.set(this.options.requestId, ids);
+        for (var key in this.options.additionalParam) {
+            params.set(key, this.options.additionalParam[key]);
+        }
+        this.http.get(this.options.url, { search: params })
+            .toPromise()
+            .then(function (res) {
+            var body = res.json();
+            _this.breadCrumbData = _this.options.requestCallBack(body);
+        })
+            .catch(function (error) {
+            return console.error(error);
+        });
+    };
+    BreadcrumbComponent.prototype.ngOnChanges = function (changes) {
+        if (changes['ids']) {
+            this.updateData(this.ids);
+        }
+    };
     BreadcrumbComponent.decorators = [
         { type: core_1.Component, args: [{
                     selector: 'app-breadcrumb',
