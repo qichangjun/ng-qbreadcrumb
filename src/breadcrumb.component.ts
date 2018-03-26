@@ -50,6 +50,48 @@ export class BreadcrumbComponent {
   ) {
   }
 
+  breadNodeClick(node : any){
+    for (let i = 0 ; i < this.ids.length;i++) {      
+      if (this.ids[i] == node[this.options.keyId]) {
+        this.ids.splice(i+1,this.ids.length - i);
+        break;
+      }
+    }
+    let ids = [];
+    for (let i = 0 ; i < this.ids.length;i++) {
+      ids.push(this.ids[i])
+    }       
+    this.breadNodeClickEvent.emit({type:'click',node:node,ids:ids})
+  }
+
+  clickRootNode(rootNode : any){
+    this.rootClickEvent.emit({type:'click',node:rootNode})
+  }
+  
+  updateData(ids : any){    
+    if (!this.options || !this.options.url) return     
+    let params = new URLSearchParams();    
+    params.set(this.options.requestId,ids)
+    for(let key in this.options.additionalParam){
+      
+      params.set(key,this.options.additionalParam[key])
+    }
+    this.http.get(this.options.url ,{search : params})
+                    .toPromise()
+                    .then(res => {
+                      let body = res.json();    
+                      this.breadCrumbData = this.options.requestCallBack(body)                      
+                    })
+                    .catch(error =>
+                      console.error(error)
+                    );
+  }
+
+  ngOnChanges(changes: {[propertyName: string]: SimpleChange}){    
+    if (changes['ids']) {          
+      this.updateData(this.ids)  
+    }
+  }
  
 }
 
