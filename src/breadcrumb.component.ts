@@ -149,7 +149,7 @@ export class BreadcrumbComponent {
 
   constructor(
     private http : Http,
-    private breadcrumbService : BreadcrumbService
+    public breadcrumbService : BreadcrumbService
   ) {
   }
 

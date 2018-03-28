@@ -1,6 +1,6 @@
 {
   "name": "ng-qbreadcrumb",
-  "version": "1.0.14",
+  "version": "1.0.16",
   "description": "a breadcrumb component for angular",
   "main": "index.js",
   "scripts": {
