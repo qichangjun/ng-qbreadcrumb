@@ -5,7 +5,7 @@ ng2-qbreadrumb is a component for [Angular](https://angular.io/)
 
 # Demo
 
-![](http://7xpyje.com1.z0.glb.clouddn.com/QQ20180328-111402-HD.mp4)
+![](http://7xpyje.com1.z0.glb.clouddn.com/QQ20180328-111402-HD.gif)
 
 
 # Install
