@@ -8,7 +8,7 @@ import { Options } from './option.class';
 import { BreadcrumbService } from './breadcrumb.service';
 export declare class BreadcrumbComponent {
     private http;
-    private breadcrumbService;
+    breadcrumbService: BreadcrumbService;
     ids: Array<any>;
     options: Options;
     breadNodeClickEvent: EventEmitter<any>;
