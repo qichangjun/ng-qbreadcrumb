@@ -68,8 +68,7 @@ var BreadcrumbComponent = (function () {
     BreadcrumbComponent.decorators = [
         { type: core_1.Component, args: [{
                     selector: 'app-breadcrumb',
-                    template: "\n    <span *ngFor=\"let rooNode of breadcrumbService.getRootNodes()\" \n    (click)=\"clickRootNode(rooNode)\"\n    >\n      {{rooNode}} > \n    </span>\n\n    <span *ngFor=\"let breadData of breadCrumbData\">\n      \n      <span [hidden]=\"breadcrumbService.isRouteHidden(breadData[options.keyTitle])\"\n        (click)=\"breadNodeClick(breadData)\">\n        {{breadData[options.keyTitle]}} >\n      </span>\n    </span>\n  ",
-                    styles: ["\n  "],
+                    template: "\n  <span *ngFor=\"let rooNode of breadcrumbService.getRootNodes()\" \n    (click)=\"clickRootNode(rooNode)\"\n  >\n    {{rooNode}} > \n  </span>\n\n  <span *ngFor=\"let breadData of breadCrumbData\">\n    \n    <span [hidden]=\"breadcrumbService.isRouteHidden(breadData[options.keyTitle])\"\n      (click)=\"breadNodeClick(breadData)\">\n      {{breadData[options.keyTitle]}} >\n    </span>\n  </span>\n\n  "
                 },] },
     ];
     /** @nocollapse */

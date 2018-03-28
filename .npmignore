@@ -1,6 +1,4 @@
 .idea
-gulp-tasks
-logs
 
 # typings
 typings
@@ -10,11 +8,6 @@ karma.conf.js
 test.bundle.js
 coverage
 
-# demo build
-demo
-demo-build
-demo/webpack/webpack.config.js
-
 *.ts
 !*.d.ts
 *.js.map
@@ -22,6 +15,8 @@ demo/webpack/webpack.config.js
 /src/*.js.map
 !/src/*.d.ts
 !/bundles/*.js.map
+/node_modules
+
 
 ./index.d.ts
 ./index.ts
