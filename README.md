@@ -11,7 +11,7 @@ ng2-qbreadrumb is a component for [Angular](https://angular.io/)
 # Install
 You can get it on npm.
 ```shell
-npm install ng-qbreadcrumb --save
+npm install ng-qbreadcrumb --save   vc 
 ```
 
 # Setup
